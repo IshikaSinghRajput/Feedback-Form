@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #ffa500,  #ffb6c1, #b0e0e6, #20b2aa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+   font-size: 36px;
+   color: #118315;
+   text-align: center;
+   margin: 20px;
+   padding: 10px;
+   
+   border-radius: 8px;
+   transition: text-shadow 0.5s ease-in-out;
+
+}
+
+/*Glowing effect*/
+h1:hover{
+    text-shadow: 0 0 20px #4caf50, 0 0 40px #4caf50, 0 0 60px #4caf50;
+}
+
+@keyframes glowing{
+    0%{text-shadow: 0 0 5px #4caf50;}
+    50%{text-shadow: 0 0 20px #4caf50, 0 0 40px #4caf50, 0 0 60px #4caf50;}
+    100%{text-shadow: 0 0 5px #4caf50; }
+
+}
+
+h1:hover{
+    animation: glowing 1.5s infinite alternate;
+}
+.box{
+    margin-top: 10px;
+    text-align: center;
+    height: 600px;
+    width: 600px;
+    color:  rgb(16, 141, 23);
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0 0.2);
+    border: 2px solid black;
+   
+    line-height: 1.5;
+   
+}
+#class{
+    padding: 40px;
+    margin-top: 40px 40px;
+   
+    border-radius: 2px;
+    
+}
+
+button{
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+    
+
+
+button:hover{
+    background-color: darkgreen;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active{
+    background-color: #3e8e41;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.name{
+    
+    margin: 8px 5px;
+    font-size: medium;
+   
+   border: 1px solid white;
+    border-radius: 2px;
+}
+
+.name:hover{
+    background-color: rgb(183, 255, 76);
+    color: black;
+}
+
+.name::placeholder{
+    background-color: black;
+    color: rgb(155, 255, 208);
+    font-size: medium;
+    
+}
+
+label{
+    color: black;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    transition: color 0.3s, transform 0.3s ease;
+}
+label:hover{
+    color: #17881a;
+    transform: scale(1.1);
+}
+/*Basic Input Styling*/
+
+input[type="text"], [type="email"], [type="number"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/*Focus Effect*/
+input[type="text"]:focus, [type="email"]:focus, [type="number"]:focus{
+    border-color: green;
+    box-shadow: 0 0 8px 0 rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+/*Disabled input styling*/
+input[type="text"]:disabled, [type="email"]:disabled, [type="number"]:disabled{
+    background-color: #f2f2f2;
+    border-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* //Placeholder styling */
+input[type="text"]::placeholder, [type="email"]::placeholder, [type="number"]::placeholder{
+    color: #aaa;
+    opacity: 50;
+}
+
+/* // Error Styling */
+input[type="text"].error, [type="email"].error, [type="number"].error{
+    border-color: #e74c3c;
+    box-shadow: 0 0 8px 0 rgba(231, 76, 60, 0.9);
+}
+#feedback{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    
+}
+
+#feedback:focus{
+    border-color: green;
+    box-shadow: 0 0 8px 0 rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+#feedback:disabled{
+    background-color: #f2f2f2;
+    border-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+#feedback::placeholder{
+    color: #aaa;
+    opacity: 50;
+}
+
+#feedback.error{
+    border-color: #e74c3c;
+    box-shadow: 0 0 8px 0 rgba(231, 76, 60, 0.9);
+}
